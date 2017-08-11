@@ -19,9 +19,9 @@ RUN \
 RUN \
 	apt-get install -y wget && \
    	cd /opt && \
-	wget http://mirror.cogentco.com/pub/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz && \
-	tar xzvf apache-maven-3.2.5-bin.tar.gz && \
-	ln -s apache-maven-3.2.5 mvn
+	wget http://mirror.cogentco.com/pub/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz && \
+	tar xzvf apache-maven-3.5.0-bin.tar.gz && \
+	ln -s apache-maven-3.5.0 mvn
 
 # Define working directory.
 WORKDIR /data
