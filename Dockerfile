@@ -11,9 +11,9 @@ RUN \
 	add-apt-repository -y ppa:webupd8team/java && \
 	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C2518248EEA14886 && \
 	apt-get update && \
-	apt-get install -y oracle-java8-installer && \
+	apt-get install -y oracle-java9-installer && \
 	rm -rf /var/lib/apt/lists/* && \
-	rm -rf /var/cache/oracle-jdk8-installer
+	rm -rf /var/cache/oracle-jdk9-installer
 
 # Install maven
 RUN \
@@ -27,7 +27,7 @@ RUN \
 WORKDIR /data
 
 # Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+ENV JAVA_HOME /usr/lib/jvm/java-9-oracle
 ENV PATH /bin:/usr/bin:/sbin:/usr/sbin:/opt/mvn/bin
 
 # Define default command.
